@@ -1,0 +1,18 @@
+{
+  "name": "lil-pstack",
+  "displayName": "lil pstack",
+  "version": "0.1.0",
+  "description": "Lean personal fork of pstack-claude: 22 hand-picked skills (PR shepherding, context recall, blast-radius analysis, subsystem explainers, adversarial review), no auto-injecting router, no principle-* bloat.",
+  "author": {
+    "name": "z0rd0n88"
+  },
+  "homepage": "https://github.com/z0rd0n88/lil-pstack",
+  "repository": "https://github.com/z0rd0n88/lil-pstack",
+  "license": "MIT",
+  "keywords": [
+    "pstack",
+    "workflow",
+    "agent-style",
+    "subagents"
+  ]
+}
