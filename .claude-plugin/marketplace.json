@@ -1,0 +1,26 @@
+{
+  "name": "lil-pstack",
+  "owner": {
+    "name": "z0rd0n88"
+  },
+  "description": "Lean personal fork of pstack-claude: 22 hand-picked skills, no auto-injecting router hook, no principle-* bloat.",
+  "plugins": [
+    {
+      "name": "lil-pstack",
+      "source": "./plugins/lil-pstack",
+      "description": "22 standalone pstack-claude skills (PR shepherding, context recall, blast-radius analysis, subsystem explainers, adversarial review) with no forced router and no per-session hook.",
+      "version": "0.1.0",
+      "author": {
+        "name": "z0rd0n88"
+      },
+      "homepage": "https://github.com/z0rd0n88/lil-pstack",
+      "license": "MIT",
+      "keywords": [
+        "pstack",
+        "workflow",
+        "agent-style",
+        "subagents"
+      ]
+    }
+  ]
+}
