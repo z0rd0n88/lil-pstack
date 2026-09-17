@@ -1,6 +1,6 @@
 # lil-pstack
 
-A lean personal fork of [pstack-claude](https://github.com/michael-denyer/pstack-claude): 22 hand-picked skills plus the `comment-sicko` agent, no auto-injecting router hook, no `principle-*` bloat.
+A lean personal fork of [pstack-claude](https://github.com/michael-denyer/pstack-claude): 23 hand-picked skills plus the `comment-sicko` agent, no auto-injecting router hook, no `principle-*` bloat.
 
 ## Why this exists
 
@@ -12,6 +12,7 @@ pstack-claude ships 50+ skills and a `SessionStart` hook that injects a mandate 
 - **Context and safety:** `recall`, `blast-radius`, `reflect`, `what-did-i-get-done`
 - **Subsystem understanding:** `how`, `why`, `teach`
 - **Review:** `interrogate`, `no-comments`, `thermo-nuclear-code-quality-review`, `deslop`, `bro`
+- **Prose:** `unslop` (strip AI-writing tells)
 - **Verification scaffolding:** `create-verification-skill`, `maintain-verification-skill`
 - **Long/audited work:** `figure-it-out`, `show-me-your-work`
 - **Setup:** `setup-pstack` (configures per-role model overrides in `~/.claude/pstack-models.md`)
