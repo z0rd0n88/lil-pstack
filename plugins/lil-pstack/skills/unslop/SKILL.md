@@ -26,6 +26,16 @@ Removing patterns is half the job. Sterile, voiceless writing is just as obvious
 - **Let some mess in.** Perfect structure looks machine-made.
 - **Be specific.** Not "this is concerning" but "there's something unsettling about agents churning away at 3am."
 
+## Do not rewrite
+
+Some text in a document is evidence, not prose. Leave it byte-identical:
+
+- Anything quoted verbatim from another person or another agent (reviewer output, transcripts, error text, cited passages).
+- Any text a separate artifact has already reviewed or scored. Rewriting it changes what was reviewed.
+- Code, commands, identifiers, file names, and the inside of tables that hold data rather than sentences.
+
+A mechanical pass (dashes, curly quotes, one-word swaps) may touch those regions; re-voicing may not.
+
 ## Patterns to detect and fix
 
 ### Content
@@ -49,6 +59,19 @@ Removing patterns is half the job. Sterile, voiceless writing is just as obvious
 ### Style
 
 13. **Em dash overuse.** Avoid em dashes entirely. Use periods or commas only (no parentheses, no en dashes, no hyphen-as-dash substitutes). Em dashes are an AI tell, and reaching for parentheses instead just trades one tell for another. If a thought needs separation, end the sentence or use a comma.
+
+    When removing them by script across markdown, branch on line type; a global replace mangles structure:
+
+    | Where | Replace with |
+    |---|---|
+    | Heading (`Stage 1 — Name`) | `: ` |
+    | Table row, between words | `, ` |
+    | Table cell that is only a dash | `none` (it means empty, not a dash) |
+    | Between two numbers or dates | ` to ` |
+    | Prose, trailing clause is a full sentence | `. ` and capitalize |
+    | Prose, otherwise | `, ` |
+
+    After a scripted run, read the whole corpus for broken cells and sentence fragments, not only the files someone will open first.
 14. **Colon overuse.** Colons are fine before a list or example. Not as mid-sentence connectors. "If you're coming from traditional automation: instead of registering event handlers, you describe conditions" adds nothing with the colon. Rewrite to let the point stand on its own without comparison framing. "Describing when the scheduler should fire works best as plain English." Same meaning, no crutch punctuation.
 15. **Boldface overuse.** Don't bold every proper noun or acronym.
 16. **Inline-header lists.** The tell is a bold label and colon that restates the line: "**Performance:** Performance improved...". Convert those to prose. A bold lead-in that ends in a period, names the item, and is followed by genuinely new detail ("**Schema in TypeScript.** Tables live in one file.") is fine, not a tell.
