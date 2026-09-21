@@ -60,7 +60,7 @@ A mechanical pass (dashes, curly quotes, one-word swaps) may touch those regions
 
 13. **Em dash overuse.** Avoid em dashes entirely. Use periods or commas only (no parentheses, no en dashes, no hyphen-as-dash substitutes). Em dashes are an AI tell, and reaching for parentheses instead just trades one tell for another. If a thought needs separation, end the sentence or use a comma.
 
-    When removing them by script across markdown, branch on line type; a global replace mangles structure:
+    To remove them across markdown, run `python3 scripts/undash.py --diff <files>`, read the diff, then run it again without `--diff` to write. It branches on line type, per this table:
 
     | Where | Replace with |
     |---|---|
