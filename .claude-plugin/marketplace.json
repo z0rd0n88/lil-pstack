@@ -9,7 +9,7 @@
       "name": "lil-pstack",
       "source": "./plugins/lil-pstack",
       "description": "23 standalone pstack-claude skills (PR shepherding, context recall, blast-radius analysis, subsystem explainers, adversarial review) with no forced router and no per-session hook.",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
         "name": "z0rd0n88"
       },
