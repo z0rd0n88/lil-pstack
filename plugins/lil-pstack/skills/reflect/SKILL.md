@@ -24,6 +24,8 @@ Skip when the conversation is trivial, off-topic, or already covered by an exist
 
 The parent finds its own transcript file before fanning out. The system prompt names Claude Code's per-project transcripts directory at `~/.claude/projects/<encoded-cwd>/`; use that path. Do not glob across `~/.claude/projects/`. That crosses workspace boundaries and reads private chats from unrelated projects.
 
+A session whose cwd changed mid-run (a worktree torn down, a `cd` into the primary checkout) has **two** encoded-cwd directories, and the one matching the current cwd can be a stub of a few lines. Probe both the worktree-encoded and the primary-repo-encoded directory — those two only, still no wider glob — and pick by the opening-prompt check below plus line count, never by mtime. The stub is the newer file.
+
 ```bash
 ls -t ~/.claude/projects/<encoded-cwd>/*.jsonl 2>/dev/null | head -10
 ```
