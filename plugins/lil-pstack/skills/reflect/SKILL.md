@@ -58,7 +58,7 @@ Sanity-check the synthesizer's Accepted list. For any item that would be enforce
 
 Before applying any Accepted edit, present the synthesizer's full Accepted/Rejected/Backlog output to the user and wait for explicit approval. The user picks which subset to apply and may redirect routings. Skill changes affect every future agent in the org; do not auto-apply.
 
-Backlog items file to whatever devex / backlog tracker your team uses automatically. Those are tracker submissions, not skill edits. Only the Accepted list waits for approval.
+Backlog items file as **GitHub issues** on the repo that owns the skill or plugin the item names (`gh issue create --repo <owner/repo>`), one issue per item, body = pattern, what was hit, suggested mechanism. Never a scratchpad, checklist issue, or personal backlog: an item nobody can assign, label or close is not filed. Those are tracker submissions, not skill edits. Only the Accepted list waits for approval.
 
 For each approved Accepted item, follow the Routing field exactly:
 
@@ -75,7 +75,7 @@ Short list, no preamble:
 
 - Edits applied: `<skill path>`. What changed, one line each.
 - New skills created: `<skill path>`. One line each (rare).
-- Backlog filed to the devex tracker: `<issue title>` (`<tags>`). One line each.
+- Backlog filed as issues: `<owner/repo#N>` `<issue title>`. One line each.
 - Dropped: one line per rejected finding + reason from the synthesizer.
 
 ## Models
