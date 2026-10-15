@@ -1,7 +1,7 @@
 {
   "name": "lil-pstack",
   "displayName": "lil pstack",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Lean personal fork of pstack-claude: 23 hand-picked skills (PR shepherding, context recall, blast-radius analysis, subsystem explainers, adversarial review), no auto-injecting router, no principle-* bloat.",
   "author": {
     "name": "z0rd0n88"
