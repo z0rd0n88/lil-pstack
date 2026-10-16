@@ -10,7 +10,7 @@ pstack-claude ships 50+ skills and a `SessionStart` hook that injects a mandate 
 
 - **PR shepherding:** `babysit`, `fix-ci`, `fix-merge-conflicts`, `get-pr-comments`, `make-pr-easy-to-review`
 - **Context and safety:** `recall`, `blast-radius`, `reflect`, `what-did-i-get-done`
-- **Subsystem understanding:** `how`, `why`, `teach`
+- **Subsystem understanding:** `how`, `why`
 - **Review:** `interrogate`, `no-comments`, `thermo-nuclear-code-quality-review`, `deslop`, `bro`
 - **Prose:** `unslop` (strip AI-writing tells)
 - **Verification scaffolding:** `create-verification-skill`, `maintain-verification-skill`

@@ -6,7 +6,7 @@ lil-pstack is a lean subset fork of [pstack-claude](https://github.com/michael-d
 
 | Files in this repo | Upstream source | License file |
 | --- | --- | --- |
-| `skills/{how,why,interrogate,reflect,show-me-your-work,figure-it-out,teach,create-verification-skill,maintain-verification-skill,no-comments,bro,unslop}/`, `agents/comment-sicko.md` | [pstack-claude @ 0.9.15](https://github.com/michael-denyer/pstack-claude), (c) 2026 Lauren Tan | [LICENSE-pstack-claude](LICENSE-pstack-claude) |
+| `skills/{how,why,interrogate,reflect,show-me-your-work,figure-it-out,create-verification-skill,maintain-verification-skill,no-comments,bro,unslop}/`, `agents/comment-sicko.md` | [pstack-claude @ 0.9.15](https://github.com/michael-denyer/pstack-claude), (c) 2026 Lauren Tan | [LICENSE-pstack-claude](LICENSE-pstack-claude) |
 | `skills/{babysit,recall,blast-radius,setup-pstack}/` | Independently authored within the [pstack-claude](https://github.com/michael-denyer/pstack-claude) port (no upstream Cursor equivalent) | [LICENSE-pstack-claude](LICENSE-pstack-claude) |
 | `skills/{fix-ci,fix-merge-conflicts,get-pr-comments,make-pr-easy-to-review,deslop,thermo-nuclear-code-quality-review,what-did-i-get-done}/` | pstack-claude's port of Cursor's `cursor-team-kit`, (c) 2026 Cursor | [LICENSE-cursor-team-kit](LICENSE-cursor-team-kit) |
 | `.claude-plugin/marketplace.json`, `plugins/lil-pstack/.claude-plugin/plugin.json`, `plugins/lil-pstack/models.json`, this file, `README.md` | Authored for this fork | [LICENSE](LICENSE) |
