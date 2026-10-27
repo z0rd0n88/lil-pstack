@@ -32,7 +32,7 @@ ls -t ~/.claude/projects/<encoded-cwd>/*.jsonl 2>/dev/null | head -10
 
 Three transcript layouts: legacy flat (`<id>.jsonl`), current nested (`<id>/<id>.jsonl`), and subagent (`<parent>/subagents/<child>.jsonl`).
 
-For each candidate, read the first JSONL line and check that `message.content[0].text` contains the conversation's opening user prompt. Take the matching path. If no path resolves, write a tight digest of the session and pass that instead.
+For each candidate, check that the first `type:"user"` record contains the conversation's opening user prompt. Metadata records (`last-prompt`, `mode`, `attachment`, …) come before it, and its `message.content` may be a plain string or a block array, so grepping the file for a distinctive phrase of the prompt is the simplest check. Take the matching path. If no path resolves, write a tight digest of the session and pass that instead.
 
 ### 2. Spawn three reviewers in parallel
 
@@ -60,12 +60,14 @@ Before applying any Accepted edit, present the synthesizer's full Accepted/Rejec
 
 Backlog items file as **GitHub issues** on the repo that owns the skill or plugin the item names (`gh issue create --repo <owner/repo>`), one issue per item, body = pattern, what was hit, suggested mechanism. Never a scratchpad, checklist issue, or personal backlog: an item nobody can assign, label or close is not filed. Those are tracker submissions, not skill edits. Only the Accepted list waits for approval.
 
-For each approved Accepted item, follow the Routing field exactly:
+A finding that refutes a fact the parent saved to memory or a handoff note this session is a correction, not a skill edit: fix that file directly and list it in step 6.
+
+For each approved Accepted item, follow the Routing field exactly. The **skill-authoring skill** below is `plugin-dev:skill-development` when installed, otherwise the closest one the skill catalog lists (e.g. `anthropic-skills:skill-creator` for description loops, `superpowers:writing-skills` for body edits).
 
 - Trivial existing-skill edit (a one-line bullet, a tightened sentence, a stale fact corrected): parent does directly.
-- Substantive existing-skill edit (a new section, a new pattern table, more than ~10 lines): hand to the **plugin-dev:skill-development** skill and run its draft / test / iterate loop.
-- `tune description: <skill path>` (the skill exists but didn't trigger when it should have): hand to `plugin-dev:skill-development` and run its description-optimization loop.
-- `new skill via plugin-dev:skill-development: <kebab-name>`: hand creation to `plugin-dev:skill-development`. Do not invent the shape ad hoc.
+- Substantive existing-skill edit (a new section, a new pattern table, more than ~10 lines): hand to the skill-authoring skill and run its draft / test / iterate loop.
+- `tune description: <skill path>` (the skill exists but didn't trigger when it should have): hand to the skill-authoring skill and run its description-optimization loop.
+- `new skill: <kebab-name>`: hand creation to the skill-authoring skill. Do not invent the shape ad hoc.
 
 If your environment ships a SKILL.md validator, run it on every touched skill before declaring done. Skip this step if it doesn't.
 
@@ -76,6 +78,7 @@ Short list, no preamble:
 - Edits applied: `<skill path>`. What changed, one line each.
 - New skills created: `<skill path>`. One line each (rare).
 - Backlog filed as issues: `<owner/repo#N>` `<issue title>`. One line each.
+- Corrected: `<memory or handoff file>`. The refuted fact, one line each.
 - Dropped: one line per rejected finding + reason from the synthesizer.
 
 ## Models

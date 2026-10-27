@@ -22,6 +22,8 @@ The durable improvement is the skill learning to use available tools, not this o
 
 Read the active transcript at <ABSOLUTE_PATH> (or use the digest below if no path is given).
 
+Write any helper scripts or extracts only under a `tooling/` subdirectory of your scratchpad. The other reviewers share that scratchpad, and same-named files overwrite each other silently.
+
 Scan for:
 - Tool invocations and command flags the agent had to discover
 - Library / framework quirks (config, lockfiles, env-var behavior, version-specific gotchas)
