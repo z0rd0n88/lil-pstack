@@ -1,6 +1,6 @@
 # NOTICE
 
-lil-pstack is a lean subset fork of [pstack-claude](https://github.com/michael-denyer/pstack-claude), itself an MIT-licensed Claude Code port of Cursor's pstack and cursor-team-kit plugins. This fork copies 22 skills and one agent verbatim from pstack-claude's `plugins/pstack/` (version 0.9.15), then edits their prose to remove references to skills this fork doesn't include (the `poteto-mode` router and its hook, the 20 `principle-*` skills, `arena`, `swarm`, `architect`, `tdd`, `automate-me`, `typescript-best-practices`, `technical-writing`) and to point `Models` sections at this repo's own trimmed `models.json`. All upstream copyright notices are preserved below.
+lil-pstack is a lean subset fork of [pstack-claude](https://github.com/michael-denyer/pstack-claude), itself an MIT-licensed Claude Code port of Cursor's pstack and cursor-team-kit plugins. This fork copies 22 skills and one agent from pstack-claude's `plugins/pstack/` (version 0.9.15), then edits their prose to remove references to skills this fork doesn't include (the `poteto-mode` router and its hook, the 20 `principle-*` skills, `arena`, `swarm`, `architect`, `tdd`, `automate-me`, `typescript-best-practices`, `technical-writing`, `teach`) and to point `Models` sections at this repo's own trimmed `models.json`. All upstream copyright notices are preserved below.
 
 ## Sources
 
@@ -13,7 +13,7 @@ lil-pstack is a lean subset fork of [pstack-claude](https://github.com/michael-d
 
 ## What changed from pstack-claude
 
-- Dropped: the `poteto-mode` router skill and its auto-firing `SessionStart` hook, all 20 `principle-*` skills, and `arena`/`swarm`/`architect`/`tdd`/`automate-me`/`typescript-best-practices`/`technical-writing`. No plugin-level hook fires on session start; every skill here is invoked directly (`/skill-name` or the Skill tool), never by a forced router.
+- Dropped: the `poteto-mode` router skill and its auto-firing `SessionStart` hook, all 20 `principle-*` skills, `arena`/`swarm`/`architect`/`tdd`/`automate-me`/`typescript-best-practices`/`technical-writing`, and `teach` (dropped in 0.2.4 in favor of the `mattpocock/skills` install). No plugin-level hook fires on session start; every skill here is invoked directly (`/skill-name` or the Skill tool), never by a forced router.
 - Dropped Codex support: every "Platform note" paragraph pointing at `codex-tools.md` is removed, since this fork ships Claude Code only.
 - Edited: cross-references to the dropped skills were rewritten as plain prose (e.g. "run the `arena` skill" became "ask several models in parallel `Agent` calls") so the guidance still stands without naming a skill that isn't here. See each skill's git history in this repo for the exact diff against upstream.
 - `models.json` trimmed from 18 roles to the 8 used by the four included panel/investigation skills (`how`, `why`, `reflect`, `interrogate`).
