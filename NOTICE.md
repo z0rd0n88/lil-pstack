@@ -1,6 +1,6 @@
 # NOTICE
 
-lil-pstack is a lean subset fork of [pstack-claude](https://github.com/michael-denyer/pstack-claude), itself an MIT-licensed Claude Code port of Cursor's pstack and cursor-team-kit plugins. This fork copies 23 skills and one agent verbatim from pstack-claude's `plugins/pstack/` (version 0.9.15), then edits their prose to remove references to skills this fork doesn't include (the `poteto-mode` router and its hook, the 20 `principle-*` skills, `arena`, `swarm`, `architect`, `tdd`, `automate-me`, `typescript-best-practices`, `technical-writing`) and to point `Models` sections at this repo's own trimmed `models.json`. All upstream copyright notices are preserved below.
+lil-pstack is a lean subset fork of [pstack-claude](https://github.com/michael-denyer/pstack-claude), itself an MIT-licensed Claude Code port of Cursor's pstack and cursor-team-kit plugins. This fork copies 22 skills and one agent verbatim from pstack-claude's `plugins/pstack/` (version 0.9.15), then edits their prose to remove references to skills this fork doesn't include (the `poteto-mode` router and its hook, the 20 `principle-*` skills, `arena`, `swarm`, `architect`, `tdd`, `automate-me`, `typescript-best-practices`, `technical-writing`) and to point `Models` sections at this repo's own trimmed `models.json`. All upstream copyright notices are preserved below.
 
 ## Sources
 

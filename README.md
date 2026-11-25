@@ -1,6 +1,6 @@
 # lil-pstack
 
-A lean personal fork of [pstack-claude](https://github.com/michael-denyer/pstack-claude): 23 hand-picked skills plus the `comment-sicko` agent, no auto-injecting router hook, no `principle-*` bloat.
+A lean personal fork of [pstack-claude](https://github.com/michael-denyer/pstack-claude): 22 hand-picked skills plus the `comment-sicko` agent, no auto-injecting router hook, no `principle-*` bloat.
 
 ## Why this exists
 
